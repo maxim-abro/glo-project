@@ -38,18 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_closeModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/closeModal */ \"./src/modules/closeModal.js\");\n\n\n\n\n\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_closeModal__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://glo/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/modules/closeModal.js":
-/*!***********************************!*\
-  !*** ./src/modules/closeModal.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar closeModal = function closeModal() {};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (closeModal);\n\n//# sourceURL=webpack://glo/./src/modules/closeModal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n\n\n\n\n\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://glo/./src/index.js?");
 
 /***/ }),
 
@@ -71,7 +60,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar modal = function modal() {\n  var modalCallback = document.querySelector('.modal-callback'),\n      modalOverlay = document.querySelector('.modal-overlay'),\n      body = document.querySelector('body');\n  body.addEventListener('click', function (e) {\n    var target = e.target;\n    console.log(target);\n\n    if (target == target.closest('.callback-btn')) {\n      modalCallback.style.display = 'block';\n      modalOverlay.style.display = 'block';\n    } else if (target == target.closest('.modal-overlay') || target == target.closest('.modal-close')) {\n      modalCallback.style.display = 'none';\n      modalOverlay.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);\n\n//# sourceURL=webpack://glo/./src/modules/modal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar modal = function modal() {\n  var modalCallback = document.querySelector('.modal-callback'),\n      modalOverlay = document.querySelector('.modal-overlay'),\n      body = document.querySelector('body');\n  body.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.callback-btn')) {\n      modalCallback.style.display = 'block';\n      modalOverlay.style.display = 'block';\n    } else if (target == target.closest('.modal-overlay') || target == target.closest('.modal-close')) {\n      modalCallback.style.display = 'none';\n      modalOverlay.style.display = 'none';\n    } else if (target == target.closest('.button-services')) {\n      modalCallback.style.display = 'block';\n      modalOverlay.style.display = 'block';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);\n\n//# sourceURL=webpack://glo/./src/modules/modal.js?");
+
+/***/ }),
+
+/***/ "./src/modules/topSlider.js":
+/*!**********************************!*\
+  !*** ./src/modules/topSlider.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  var slides = document.querySelectorAll('.top-slider>.item');\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://glo/./src/modules/topSlider.js?");
 
 /***/ }),
 
@@ -473,7 +473,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("c72d521f78853c8cf26c")
+/******/ 		__webpack_require__.h = () => ("91a3f43dcf21b8bedf0f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -5,7 +5,6 @@ const modal = () => {
 
     body.addEventListener('click', (e) => {
         let target = e.target;
-        console.log(target);
         if (target == target.closest('.callback-btn')) {
             modalCallback.style.display = 'block';
             modalOverlay.style.display = 'block';
@@ -13,6 +12,9 @@ const modal = () => {
             target == target.closest('.modal-close')) {
             modalCallback.style.display = 'none';
             modalOverlay.style.display = 'none';
+        } else if (target == target.closest('.button-services')) {
+            modalCallback.style.display = 'block';
+            modalOverlay.style.display = 'block';
         }
     })
 }

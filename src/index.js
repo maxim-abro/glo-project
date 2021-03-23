@@ -2,13 +2,10 @@
 
 import menu from './modules/menu';
 import modal from './modules/modal';
-import closeModal from './modules/closeModal';
-
-
-
+import topSlider from './modules/topSlider';
 
 
 
 menu();
 modal();
-closeModal();
+topSlider();
