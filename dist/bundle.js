@@ -38,7 +38,18 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n\n\n\n\n\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://glo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n/* harmony import */ var _modules_toUp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/toUp */ \"./src/modules/toUp.js\");\n\n\n\n\n\n\n\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modules_toUp__WEBPACK_IMPORTED_MODULE_4__.default)();\n\n//# sourceURL=webpack://glo/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/accordeon.js":
+/*!**********************************!*\
+  !*** ./src/modules/accordeon.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar accordeon = function accordeon() {//     const accord = document.querySelector('.accordeon'),\n  //         title = accord.querySelectorAll('.title'),\n  //         element = accord.querySelectorAll('.element'),\n  //         elementContent = accord.querySelectorAll('.element-content');\n  //     const toggleAccord = (index) => {\n  //         for (let i = 0; i < elementContent.length; i++) {\n  //             if (index == i) {\n  //                 element[i].classList.add('active');\n  //                 const content = element[i].querySelector('.element-content');\n  //                 content.style.display = 'block';\n  //             } else {\n  //                 element[i].classList.remove('active');\n  //                 const content = element[i].querySelector('.element-content');\n  //                 content.style.display = 'none';\n  //             }\n  //         }\n  //     }\n  //     accord.addEventListener('click', (e) => {\n  //         let target = e.target;\n  //         if (target == target.closest('.element')) {\n  //             element.forEach((item, i) => {\n  //                 if (item == target) {\n  //                     console.log('bingo');\n  //                     toggleAccord(i)\n  //                 }\n  //             });\n  //         }\n  //     });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://glo/./src/modules/accordeon.js?");
 
 /***/ }),
 
@@ -64,6 +75,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modules/toUp.js":
+/*!*****************************!*\
+  !*** ./src/modules/toUp.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar toUp = function toUp() {\n  var goTopBtn = document.querySelector('.up');\n\n  var trackScroll = function trackScroll() {\n    var scrolled = window.pageYOffset;\n    var coords = document.documentElement.clientHeight;\n\n    if (scrolled > coords) {\n      goTopBtn.style.display = 'block';\n    }\n\n    if (scrolled < coords) {\n      goTopBtn.style.display = 'none';\n    }\n  };\n\n  function backToTop() {\n    if (window.pageYOffset > 0) {\n      window.scrollBy(0, -80);\n      setTimeout(backToTop, 0);\n    }\n  }\n\n  window.addEventListener('scroll', trackScroll);\n  goTopBtn.addEventListener('click', backToTop);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toUp);\n\n//# sourceURL=webpack://glo/./src/modules/toUp.js?");
+
+/***/ }),
+
 /***/ "./src/modules/topSlider.js":
 /*!**********************************!*\
   !*** ./src/modules/topSlider.js ***!
@@ -71,7 +93,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  var slides = document.querySelectorAll('.top-slider>.item');\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://glo/./src/modules/topSlider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  setInterval(function () {\n    var slides = document.querySelectorAll('.top-slider>.item');\n    slides[0].insertAdjacentElement('beforebegin', slides[2]);\n  }, 3000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://glo/./src/modules/topSlider.js?");
 
 /***/ }),
 
@@ -473,7 +495,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("91a3f43dcf21b8bedf0f")
+/******/ 		__webpack_require__.h = () => ("867d66b1dc997f513a5d")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
