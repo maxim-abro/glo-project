@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar accordeon = function accordeon() {//     const accord = document.querySelector('.accordeon'),\n  //         title = accord.querySelectorAll('.title'),\n  //         element = accord.querySelectorAll('.element'),\n  //         elementContent = accord.querySelectorAll('.element-content');\n  //     const toggleAccord = (index) => {\n  //         for (let i = 0; i < elementContent.length; i++) {\n  //             if (index == i) {\n  //                 element[i].classList.add('active');\n  //                 const content = element[i].querySelector('.element-content');\n  //                 content.style.display = 'block';\n  //             } else {\n  //                 element[i].classList.remove('active');\n  //                 const content = element[i].querySelector('.element-content');\n  //                 content.style.display = 'none';\n  //             }\n  //         }\n  //     }\n  //     accord.addEventListener('click', (e) => {\n  //         let target = e.target;\n  //         if (target == target.closest('.element')) {\n  //             element.forEach((item, i) => {\n  //                 if (item == target) {\n  //                     console.log('bingo');\n  //                     toggleAccord(i)\n  //                 }\n  //             });\n  //         }\n  //     });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://glo/./src/modules/accordeon.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar accordeon = function accordeon() {\n  var accord = document.querySelector('.accordeon'),\n      title = accord.querySelectorAll('.title'),\n      element = accord.querySelectorAll('.element'),\n      elementContent = accord.querySelectorAll('.element-content');\n  accord.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.title')) {\n      for (var i = 0; i < element.length; i++) {\n        if (target.parentElement == element[i]) {\n          element[i].classList.add('active');\n          elementContent[i].style.display = 'block';\n        } else {\n          element[i].classList.remove('active');\n          elementContent[i].style.display = 'none';\n        }\n      }\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://glo/./src/modules/accordeon.js?");
 
 /***/ }),
 
@@ -495,7 +495,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("867d66b1dc997f513a5d")
+/******/ 		__webpack_require__.h = () => ("7ef87d0bb3dc7c4cfa32")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
