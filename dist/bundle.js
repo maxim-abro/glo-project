@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n/* harmony import */ var _modules_toUp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/toUp */ \"./src/modules/toUp.js\");\n\n\n\n\n\n\n\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modules_toUp__WEBPACK_IMPORTED_MODULE_4__.default)();\n\n//# sourceURL=webpack://glo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n/* harmony import */ var _modules_toUp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/toUp */ \"./src/modules/toUp.js\");\n/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/carousel */ \"./src/modules/carousel.js\");\n/* harmony import */ var _modules_fetchData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/fetchData */ \"./src/modules/fetchData.js\");\n/* harmony import */ var _modules_validate__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/validate */ \"./src/modules/validate.js\");\n\n\n\n\n\n\n\n\n\n\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modules_toUp__WEBPACK_IMPORTED_MODULE_4__.default)();\n(0,_modules_carousel__WEBPACK_IMPORTED_MODULE_5__.default)();\n(0,_modules_fetchData__WEBPACK_IMPORTED_MODULE_6__.default)();\n(0,_modules_validate__WEBPACK_IMPORTED_MODULE_7__.default)();\n\n//# sourceURL=webpack://glo/./src/index.js?");
 
 /***/ }),
 
@@ -50,6 +50,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar accordeon = function accordeon() {\n  var accord = document.querySelector('.accordeon'),\n      title = accord.querySelectorAll('.title'),\n      element = accord.querySelectorAll('.element'),\n      elementContent = accord.querySelectorAll('.element-content');\n  accord.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.title')) {\n      for (var i = 0; i < element.length; i++) {\n        if (target.parentElement == element[i]) {\n          element[i].classList.add('active');\n          elementContent[i].style.display = 'block';\n        } else {\n          element[i].classList.remove('active');\n          elementContent[i].style.display = 'none';\n        }\n      }\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n//# sourceURL=webpack://glo/./src/modules/accordeon.js?");
+
+/***/ }),
+
+/***/ "./src/modules/carousel.js":
+/*!*********************************!*\
+  !*** ./src/modules/carousel.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar carousel = function carousel() {\n  var services = document.querySelector('#services'),\n      elems = services.querySelectorAll('.element'),\n      left = document.querySelector('.arrow-left'),\n      right = document.querySelector('.arrow-right');\n  services.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.arrow-right')) {}\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (carousel);\n\n//# sourceURL=webpack://glo/./src/modules/carousel.js?");
+
+/***/ }),
+
+/***/ "./src/modules/fetchData.js":
+/*!**********************************!*\
+  !*** ./src/modules/fetchData.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === \"undefined\" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === \"number\") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError(\"Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it[\"return\"] != null) it[\"return\"](); } finally { if (didErr) throw err; } } }; }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nvar fetchData = function fetchData() {\n  var statusMessage = document.createElement('div');\n  var errorMessage = 'Что то пошло не так...',\n      loadMessage = 'Загрузка...',\n      successMessage = 'Спасибо! Мы скоро с вами свяжемся!';\n  var form = document.getElementById('form1');\n  form.addEventListener('submit', function (e) {\n    e.preventDefault();\n    form.appendChild(statusMessage);\n    var inputs = form.querySelectorAll('input');\n    statusMessage.textContent = loadMessage;\n    var formData = new FormData(form);\n    var body = {};\n\n    var _iterator = _createForOfIteratorHelper(formData.entries()),\n        _step;\n\n    try {\n      for (_iterator.s(); !(_step = _iterator.n()).done;) {\n        var val = _step.value;\n        body[val[0]] = val[1];\n      }\n    } catch (err) {\n      _iterator.e(err);\n    } finally {\n      _iterator.f();\n    }\n\n    postData(body).then(function (response) {\n      if (response.status !== 200) {\n        throw new Error('status network not 200');\n      }\n\n      statusMessage.textContent = successMessage;\n      setTimeout(function () {\n        statusMessage.textContent = '';\n      }, 3000);\n    })[\"catch\"](function (error) {\n      statusMessage.textContent = errorMessage;\n      console.error(error);\n      setTimeout(function () {\n        statusMessage.textContent = '';\n      }, 3000);\n    });\n    inputs.forEach(function (item, i) {\n      if (i < 2) {\n        item.value = '';\n      }\n    });\n  });\n\n  var postData = function postData(body) {\n    return fetch('./server.php', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: JSON.stringify(body)\n    });\n  };\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchData);\n\n//# sourceURL=webpack://glo/./src/modules/fetchData.js?");
 
 /***/ }),
 
@@ -94,6 +116,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  setInterval(function () {\n    var slides = document.querySelectorAll('.top-slider>.item');\n    slides[0].insertAdjacentElement('beforebegin', slides[2]);\n  }, 3000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://glo/./src/modules/topSlider.js?");
+
+/***/ }),
+
+/***/ "./src/modules/validate.js":
+/*!*********************************!*\
+  !*** ./src/modules/validate.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar validate = function validate() {\n  document.addEventListener('input', function (e) {\n    var target = e.target;\n\n    if (target.matches('.tel')) {\n      target.value = target.value.replace(/[^\\+\\d]/gi, '');\n    } else if (target.matches('.name')) {\n      target.value = target.value.replace(/[^А-Яа-яЁё]/gi, '');\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validate);\n\n//# sourceURL=webpack://glo/./src/modules/validate.js?");
 
 /***/ }),
 
@@ -495,7 +528,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("7ef87d0bb3dc7c4cfa32")
+/******/ 		__webpack_require__.h = () => ("2a414620a297f436dc58")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
