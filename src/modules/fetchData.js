@@ -15,7 +15,7 @@ const fetchData = () => {
         e.preventDefault();
         form.appendChild(statusMessage);
         let inputs = form.querySelectorAll('input');
-        if (inputs[1].value.length < 8 || inputs[1].value.length > 11) {
+        if (inputs[1].value.length < 10 || inputs[1].value.length > 12) {
             statusMessage.textContent = 'Введите корректный номер телефона';
         } else if (inputs[0].value.length < 2) {
             statusMessage.textContent = 'Имя должно состоять минимум из двух букв';
