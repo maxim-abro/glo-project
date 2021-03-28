@@ -15,6 +15,9 @@ const modal = () => {
         } else if (target == target.closest('.button-services')) {
             modalCallback.style.display = 'block';
             modalOverlay.style.display = 'block';
+        } else if (target == target.closest('.fancyboxModal')) {
+            modalCallback.style.display = 'block';
+            modalOverlay.style.display = 'block';
         }
     })
 }
