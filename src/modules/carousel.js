@@ -102,7 +102,6 @@ const carousel = () => {
         nextSlider() {
             if (this.options.infinity || this.options.position < this.options.maxPosition) {
                 ++this.options.position;
-                console.log(this.options.position);
                 if (this.options.position > this.options.maxPosition) {
                     this.options.position = 0;
                 }
